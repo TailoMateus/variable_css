@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Create vareable with CSS -->
+	<style type="text/css">
+
+		:root {
+          --h1_color: blue;
+          --h2_color: red;
+        }
+
+        h1 {
+            color: var(--h1_color);
+        }
+
+        h2 {
+            color: var(--h2_color);
+        }
+
+        .progress {
+			height: var(--altura);
+			background-color: red;
+			display: inline-block;
+			width: auto;
+			min-height: 10px;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="progress">Click</div>
+	<h1> TESTE </h1>
+	<h2> TESTE </h2>
+
+
+	<!-- Create variable with CSS using JS -->
+
+	<script type="text/javascript">
+		
+		var progress = document.querySelector('.progress');
+
+		progress.addEventListener("click", function(event) {
+			event.preventDefault();
+
+			altura = 50;
+			progress.style.setProperty('--altura', altura + 'px');
+		});
+
+	</script>
+
+</body>
+</html>
